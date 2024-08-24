@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar {
+    background-color: #11852b;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+body {
+    font-family: open sans, Arial, sans-serif;
+}
+
+.TextoHome h1 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.TextoHome p {
+    padding: 20px;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+}
+
+.SectionHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.ImagemPessoasHome {
+    max-height: 600px;
+}
