@@ -1,0 +1,9 @@
+.TableView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    padding: 1rem;
+    font-size: 1.2em;
+    text-decoration: none;
+}

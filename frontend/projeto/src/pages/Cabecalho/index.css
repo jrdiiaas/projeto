@@ -1,0 +1,20 @@
+.NavbarItens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NavbarItens li {
+    padding-left: 1.6rem;
+    list-style-type: none;
+}
+
+.NavbarItens li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.NavbarItens li a:hover {
+    text-decoration: underline;
+}
