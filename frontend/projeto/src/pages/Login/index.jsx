@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import "./index.css"; 
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -25,11 +26,11 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            {errorMessage && <div className="error">{errorMessage}</div>}
-            <form onSubmit={handleSubmit}>
-                <div>
+        <div className="login-container">
+            <form className="login-form" onSubmit={handleSubmit}>
+                <h2>Login</h2>
+                {errorMessage && <div className="error">{errorMessage}</div>}
+                <div className="form-group">
                     <label htmlFor="username">Usuário:</label>
                     <input
                         type="text"
@@ -38,7 +39,7 @@ const Login = () => {
                         onChange={(e) => setUsername(e.target.value)}
                     />
                 </div>
-                <div>
+                <div className="form-group">
                     <label htmlFor="password">Senha:</label>
                     <input
                         type="password"
@@ -47,7 +48,7 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <button type="submit">Entrar</button>
+                <button type="submit" className="login-button">Entrar</button>
             </form>
         </div>
     );
