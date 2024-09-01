@@ -33,33 +33,36 @@ function AddCliente() {
 
     return (
         <>
-            <h1>adicionar cliente</h1>
-            <form onSubmit={salvaCliente}>
-                <label>nome</label>
-                <input
-                    type="text"
-                    name="nome"
-                    value={cliente.nome}
-                    onChange={handleChange}
-                />
+            <div className="FormView">
+                <form onSubmit={salvaCliente}>
+                    <label>NOME</label>
+                    <input
+                        type="text"
+                        name="nome"
+                        value={cliente.nome}
+                        onChange={handleChange}
+                    />
 
-                <label>idade</label>
-                <input
-                    type="text"
-                    name="idade"
-                    value={cliente.idade}
-                    onChange={handleChange}
-                />
+                    <label>IDADE</label>
+                    <input
+                        type="text"
+                        name="idade"
+                        value={cliente.idade}
+                        onChange={handleChange}
+                    />
 
-                <label>email</label>
-                <input
-                    type="text"
-                    name="email"
-                    value={cliente.email}
-                    onChange={handleChange}
-                />
-                <button type="submit">salvar</button>
-            </form>
+                    <label>EMAIL</label>
+                    <input
+                        type="text"
+                        name="email"
+                        value={cliente.email}
+                        onChange={handleChange}
+                    />
+                    <button className="buttonSubmit" type="submit">
+                        salvar
+                    </button>
+                </form>
+            </div>
         </>
     );
 }

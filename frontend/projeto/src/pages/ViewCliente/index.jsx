@@ -26,13 +26,14 @@ function ViewCliente() {
     return (
         <>
             <div className="TableView">
-                <table>
+                <table className="InTableView">
                     <thead>
                         <tr>
-                            <th>id</th>
-                            <th>nome</th>
-                            <th>idade</th>
-                            <th>email</th>
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>IDADE</th>
+                            <th>EMAIL</th>
+                            <th>FUNÇÕES</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,11 +49,12 @@ function ViewCliente() {
                                             cliente.id,
                                         )}`}
                                     >
-                                        <button>
+                                        <button className="buttonfunc1">
                                             <FaEdit />
                                         </button>
                                     </Link>
                                     <button
+                                        className="buttonfunc2"
                                         onClick={() =>
                                             deleteCliente(cliente.id)
                                         }

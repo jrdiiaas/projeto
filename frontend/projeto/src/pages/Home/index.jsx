@@ -13,7 +13,7 @@ function Home() {
                     <Cabecalho />
                 </div>
             </nav>
-            <body>
+            <div>
                 <div className="TextoHome">
                     <h1>Seja bem-vindo(a)!</h1>
                     <p>É um prazer recebê-lo(a) aqui.</p>
@@ -27,7 +27,7 @@ function Home() {
                         />
                     </figure>
                 </section>
-            </body>
+            </div>
         </>
     );
 }

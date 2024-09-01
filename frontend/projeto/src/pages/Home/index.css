@@ -8,19 +8,26 @@
     color: #ffffff;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
     font-size: 1.2em;
     text-decoration: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 body {
     font-family: open sans, Arial, sans-serif;
+    position: relative;
+    top: 60px;
 }
 
 .TextoHome h1 {
-    padding: 20px;
     display: flex;
     justify-content: center;
 }
@@ -36,7 +43,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
 }
 
 .ImagemPessoasHome {

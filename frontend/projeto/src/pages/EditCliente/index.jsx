@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { editCliente, getCliente } from "../../services/cliente-requests";
+import "./index.css";
 
 function EditCliente() {
     const { id } = useParams();
@@ -47,42 +48,46 @@ function EditCliente() {
 
     return (
         <>
-            <h1>editar cliente</h1>
-            <form onSubmit={editarCliente}>
-                <label>id</label>
-                <input
-                    type="text"
-                    name="id"
-                    value={cliente.id}
-                    onChange={handleChange}
-                    readOnly
-                />
+            <div className="TableView2">
+                <form onSubmit={editarCliente}>
+                    <label>ID</label>
+                    <input
+                        id="ID"
+                        type="text"
+                        name="id"
+                        value={cliente.id}
+                        onChange={handleChange}
+                        readOnly
+                    />
 
-                <label>nome</label>
-                <input
-                    type="text"
-                    name="nome"
-                    value={cliente.nome}
-                    onChange={handleChange}
-                />
+                    <label>NOME</label>
+                    <input
+                        type="text"
+                        name="nome"
+                        value={cliente.nome}
+                        onChange={handleChange}
+                    />
 
-                <label>idade</label>
-                <input
-                    type="text"
-                    name="idade"
-                    value={cliente.idade}
-                    onChange={handleChange}
-                />
+                    <label>IDADE</label>
+                    <input
+                        type="text"
+                        name="idade"
+                        value={cliente.idade}
+                        onChange={handleChange}
+                    />
 
-                <label>email</label>
-                <input
-                    type="text"
-                    name="email"
-                    value={cliente.email}
-                    onChange={handleChange}
-                />
-                <button type="submit">atualizar cliente</button>
-            </form>
+                    <label>EMAIL</label>
+                    <input
+                        type="text"
+                        name="email"
+                        value={cliente.email}
+                        onChange={handleChange}
+                    />
+                    <button className="buttonSubmit" type="submit">
+                        atualizar cliente
+                    </button>
+                </form>
+            </div>
         </>
     );
 }
