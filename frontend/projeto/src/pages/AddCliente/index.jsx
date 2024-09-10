@@ -6,9 +6,9 @@ function AddCliente() {
     const navigate = useNavigate();
 
     const [cliente, setCliente] = useState({
-        nome: "",
-        idade: "",
-        email: "",
+        NOME: "",
+        IDADE: "",
+        EMAIL: "",
     });
 
     const handleChange = (event) => {
@@ -26,7 +26,11 @@ function AddCliente() {
         event.preventDefault();
         console.log(cliente);
 
-        await addCliente(cliente);
+        await addCliente({
+            nome: cliente.NOME,
+            idade: cliente.IDADE,
+            email: cliente.EMAIL,
+        });
 
         navigate("/cliente/view");
     };
@@ -34,11 +38,20 @@ function AddCliente() {
     return (
         <>
             <div className="FormView">
-                <form onSubmit={salvaCliente}>
+                <form
+                    onSubmit={salvaCliente}
+                    action="https://ifce.us9.list-manage.com/subscribe/post?u=8f9cf9e568daad496d02dbfaf&amp;id=b22483b60d&amp;f_id=001cfae3f0"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    className="validate"
+                    target="_self"
+                    noValidate=""
+                >
                     <label>NOME</label>
                     <input
                         type="text"
-                        name="nome"
+                        name="NOME"
                         value={cliente.nome}
                         onChange={handleChange}
                     />
@@ -46,7 +59,7 @@ function AddCliente() {
                     <label>IDADE</label>
                     <input
                         type="text"
-                        name="idade"
+                        name="IDADE"
                         value={cliente.idade}
                         onChange={handleChange}
                     />
@@ -54,7 +67,7 @@ function AddCliente() {
                     <label>EMAIL</label>
                     <input
                         type="text"
-                        name="email"
+                        name="EMAIL"
                         value={cliente.email}
                         onChange={handleChange}
                     />

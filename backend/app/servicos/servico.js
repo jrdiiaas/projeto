@@ -5,9 +5,9 @@ exports.createCliente = (req, res) => {
     let cliente = {};
 
     try {
-        cliente.nome = req.body.nome;
-        cliente.idade = req.body.idade;
-        cliente.email = req.body.email;
+        cliente.nome = req.body.NOME || req.body.nome;
+        cliente.idade = req.body.IDADE || req.body.idade;
+        cliente.email = req.body.EMAIL || req.body.email;
 
 
         Cliente.create(cliente, { attributes: ['id', 'nome', 'idade', 'email'] })
@@ -86,9 +86,9 @@ exports.updateCliente = async (req, res) => {
         } else {
 
             let updatedObject = {
-                nome: req.body.nome,
-                idade: req.body.idade,
-                email: req.body.email,
+                nome: req.body.NOME || req.body.nome,
+                idade: req.body.IDADE || req.body.idade,
+                email: req.body.EMAIL || req.body.email,
             }
             let result = await Cliente.update(updatedObject,
                 {

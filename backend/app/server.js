@@ -7,6 +7,8 @@ const Cliente = db.Cliente;
 const Post = db.Post;
 const cors = require('cors')
 
+const port = process.env.PORT || 3001;
+
 const corsOptions = {
     origin: 'http://localhost:5173',
     optionsSuccessStatus: 200
