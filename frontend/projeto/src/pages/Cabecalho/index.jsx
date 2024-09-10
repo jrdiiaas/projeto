@@ -15,10 +15,13 @@ function Cabecalho() {
                         <Link to="../">INÍCIO</Link>
                     </li>
                     <li>
-                        <Link to="../cliente/view">VER TODOS OS CLIENTES</Link>
+                        <Link to="../cliente/view">LOGIN</Link>
                     </li>
                     <li>
-                        <Link to="../cliente">ADICIONAR CLIENTE</Link>
+                        <Link to="../admin">POSTS</Link>
+                    </li>
+                    <li>
+                        <Link to="../cliente">INSCREVER-SE</Link>
                     </li>
                     <li>
                         <Link to="/" onClick={handleLogout}>

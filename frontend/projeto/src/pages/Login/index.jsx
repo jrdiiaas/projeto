@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import "./index.css"; 
+import Cabecalho from "../Cabecalho/index.jsx";
+import "./index.css";
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -27,6 +29,14 @@ const Login = () => {
 
     return (
         <div className="login-container">
+            <nav className="Navbar">
+                <div>
+                    <h1>Página Administrativa</h1>
+                </div>
+                <div>
+                    <Cabecalho />
+                </div>
+            </nav>
             <form className="login-form" onSubmit={handleSubmit}>
                 <h2>Login</h2>
                 {errorMessage && <div className="error">{errorMessage}</div>}
@@ -48,7 +58,9 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <button type="submit" className="login-button">Entrar</button>
+                <button type="submit" className="login-button">
+                    Entrar
+                </button>
             </form>
         </div>
     );

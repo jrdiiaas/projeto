@@ -4,6 +4,7 @@ const db = require('./config/db.config.js');
 const router = require('./routes/routes.js');
 const bodyParser = require('body-parser');
 const Cliente = db.Cliente;
+const Post = db.Post;
 const cors = require('cors')
 
 const corsOptions = {
@@ -34,6 +35,17 @@ db.sequelize.sync({ force: true }).then(() => {
 
         clientes.map(cliente => {
             Cliente.create(cliente);
+        });
+    })
+    Post.sync().then(() => {
+        const posts = [
+            { title: 'Post 1', content: 'Conteúdo do post 1' },
+            { title: 'Post 2', content: 'Conteúdo do post 2' },
+            { title: 'Post 3', content: 'Conteúdo do post 3' },
+        ]
+
+        posts.map(post => {
+            Post.create(post);
         });
     })
 });

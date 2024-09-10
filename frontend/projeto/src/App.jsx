@@ -7,6 +7,7 @@ import ViewCliente from "./pages/ViewCliente";
 import NoMatch from "./pages/NoMatch";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import Login from "./pages/Login";
+import Admin from "./pages/Admin";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,14 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="cliente" element={<Cliente />}>
                     <Route index element={<AddCliente />} />
+                    <Route
+                        path="admin"
+                        element={
+                            <PrivateRoute>
+                                <Admin />
+                            </PrivateRoute>
+                        }
+                    />
                     <Route
                         path="edit/:id"
                         element={

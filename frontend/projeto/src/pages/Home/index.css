@@ -22,9 +22,13 @@
 }
 
 body {
-    font-family: open sans, Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     position: relative;
-    top: 60px;
+    margin-top: 80px;
+}
+
+.content {
+    padding: 20px;
 }
 
 .TextoHome h1 {
