@@ -18,7 +18,7 @@ function Cabecalho() {
                         <Link to="../cliente/view">LOGIN</Link>
                     </li>
                     <li>
-                        <Link to="../admin">POSTS</Link>
+                        <Link to="../cliente/admin">POSTS</Link>
                     </li>
                     <li>
                         <Link to="../cliente">INSCREVER-SE</Link>
