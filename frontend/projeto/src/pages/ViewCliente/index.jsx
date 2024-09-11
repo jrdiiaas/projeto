@@ -9,18 +9,26 @@ function ViewCliente() {
 
     useEffect(() => {
         carregaClientes();
-    }, [clientes]);
+    }, []); // Dependências vazias para que a função execute apenas uma vez após o primeiro render
 
     const carregaClientes = async () => {
-        const clientesResponse = await getClientes();
-
-        setClientes(await clientesResponse.data);
-
-        console.log(clientes);
+        try {
+            const clientesResponse = await getClientes();
+            setClientes(clientesResponse.data); // Atualiza o estado com os dados retornados
+            console.log(clientesResponse.data); // Log dos dados retornados
+        } catch (error) {
+            console.error("Erro ao carregar clientes:", error);
+        }
     };
 
     const deleteCliente = async (id) => {
-        await removeCliente(id);
+        try {
+            await removeCliente(id);
+            // Recarregue a lista de clientes após a exclusão para refletir as mudanças
+            carregaClientes();
+        } catch (error) {
+            console.error("Erro ao remover cliente:", error);
+        }
     };
 
     return (
