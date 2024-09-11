@@ -39,14 +39,12 @@ function AddCliente() {
         <>
             <div className="FormView">
                 <form
-                    onSubmit={salvaCliente}
                     action="https://ifce.us9.list-manage.com/subscribe/post?u=8f9cf9e568daad496d02dbfaf&amp;id=b22483b60d&amp;f_id=001cfae3f0"
                     method="post"
                     id="mc-embedded-subscribe-form"
                     name="mc-embedded-subscribe-form"
-                    className="validate"
                     target="_self"
-                    noValidate=""
+                    onSubmit={salvaCliente}
                 >
                     <label>NOME</label>
                     <input
@@ -58,7 +56,7 @@ function AddCliente() {
 
                     <label>IDADE</label>
                     <input
-                        type="text"
+                        type="number"
                         name="IDADE"
                         value={cliente.idade}
                         onChange={handleChange}
