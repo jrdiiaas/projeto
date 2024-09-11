@@ -8,8 +8,9 @@ const Post = db.Post;
 const cors = require('cors')
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
-    optionsSuccessStatus: 200
+    origin: 'https://frontend-production-3870.up.railway.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }
 
 app.use(cors(corsOptions));
