@@ -66,7 +66,7 @@ function AddCliente() {
 
                     <label>EMAIL</label>
                     <input
-                        type="text"
+                        type="email"
                         name="EMAIL"
                         value={cliente.email}
                         onChange={handleChange}
