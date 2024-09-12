@@ -38,14 +38,7 @@ function AddCliente() {
     return (
         <>
             <div className="FormView">
-                <form
-                    action="https://ifce.us9.list-manage.com/subscribe/post?u=8f9cf9e568daad496d02dbfaf&amp;id=b22483b60d&amp;f_id=001cfae3f0"
-                    method="post"
-                    id="mc-embedded-subscribe-form"
-                    name="mc-embedded-subscribe-form"
-                    target="_self"
-                    onSubmit={salvaCliente}
-                >
+                <form onSubmit={salvaCliente}>
                     <label>NOME</label>
                     <input
                         type="text"
