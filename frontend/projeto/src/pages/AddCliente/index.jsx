@@ -38,6 +38,11 @@ function AddCliente() {
     return (
         <>
             <div className="FormView">
+                <script
+                    type="text/javascript"
+                    async
+                    src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/43fdbd96-fa8a-4f65-a3fe-a264626b862c-loader.js"
+                ></script>
                 <form onSubmit={salvaCliente}>
                     <label>NOME</label>
                     <input
